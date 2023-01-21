@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         const { originalname } = file
-        cb(null, `${uuid()}-${originalname}`)
+        cb(null, `${uuid()}-${originalname}`) // uuid is used to add a random string to the front to differentiate the different files/ images
     }
 })
 
